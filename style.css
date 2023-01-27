@@ -257,7 +257,6 @@ section
 section
 li {
   font-size: 15px;
-  /*   */
   line-height: 24px;
 }
 
@@ -313,4 +312,107 @@ a {
 footer
 .link-container {
   margin-bottom: 85px;
+}
+
+@media (min-width: 768px) {
+  .body-container {
+    margin: 0 39px;
+    font-size: 18px;
+  }
+
+  header {
+    margin: 58px 0 51.5px 0;
+    font-size: 18px;
+  }
+
+  main
+  input {
+    margin-bottom: 50px;
+  }
+
+  .word
+  h1 {
+    font-size: 64px;
+    margin-bottom:11px;
+  }
+
+  .word
+  p {
+    font-size: 24px;
+  }
+
+  .word-container
+  svg {
+    height: 75px;
+    width: 75px;
+  }
+
+  section
+  .hr-container {
+    margin-bottom: 43px;
+  }
+
+  .hr-container
+  p {
+    font-size: 24px;
+    padding-right: 32px;
+  }
+
+  section
+  .meaning {
+    font-size: 20px;
+    margin-bottom: 27px;
+  }
+
+  section
+  li {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  section
+  .synonyms-container {
+    margin: 41px 0 43px 0;
+  }
+
+  .synonyms-container
+  p:nth-of-type(1) {
+    font-size: 20px;
+    margin-right: 40px;
+  }
+
+  .synonyms-container
+  p:nth-of-type(2) {
+    font-size: 20px;
+  }
+
+  section
+  .example {
+    font-size: 18px;
+    margin: 13px 0 39px 25px;
+  }
+
+  .footer-container {
+    display: flex;
+    margin-bottom: 118px;
+    align-items: center;
+  }
+
+  footer
+  p {
+    font-size: 14px;
+    margin: 0 25px 0 0;
+
+  }
+
+  footer
+  a {
+    margin-top: -5px;
+  }
+
+  footer
+  .link-container {
+    margin-bottom: 0;
+  }
+
 }
