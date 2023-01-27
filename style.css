@@ -124,3 +124,96 @@ main
 input:focus {
   outline-color: var(--purple);
 }
+
+main
+.word-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 34px;
+}
+
+.word-container
+.word {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.word
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 9px;
+}
+
+.word
+p {
+  font-size: 18px;
+  color: var(--purple);
+}
+
+.word-container
+svg {
+  height: 48px;
+  width: 48px;
+}
+
+section
+.hr-container {
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.hr-container
+p {
+  font-size: 18px;
+  font-weight: bold;
+  display: inline-block;
+  background-color: var(--white);
+  padding-right: 25px;
+}
+
+.hr-container
+hr {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  z-index: -1;
+  color: var(--light-gray-2);
+}
+
+section
+.meaning {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--light-gray-3);
+  margin-bottom: 17px;
+}
+
+section
+li {
+  font-size: 15px;
+  color: var(--dark-gray-2);
+  line-height: 24px;
+}
+
+section
+.synonyms-container {
+  display: flex;
+  margin: 24px 0 31px 0;
+}
+
+.synonyms-container
+p:nth-of-type(1) {
+  margin-right: 24px;
+  color: var(--light-gray-3);
+  font-size: 16px;
+}
+
+.synonyms-container
+p:nth-of-type(2) {
+  color: var(--purple);
+  font-size: 16px;
+  font-weight: bold;
+}
