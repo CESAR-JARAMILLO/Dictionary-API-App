@@ -36,7 +36,22 @@
   box-sizing: border-box;
 }
 
-body {
+.dark-mode {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.dark-mode
+hr {
+  border-color: var(--dark-gray-3);
+}
+
+.dark-mode
+::marker {
+  color: var(--purple);
+}
+
+.light-mode {
   background-color: var(--white);
   color: var(--black);
 }
@@ -93,18 +108,46 @@ header
   width: 40px;
   height: 20px;
   border-radius: 10px;
-  background-color: gray;
+}
+
+.light-mode
+.oval {
+  background-color: var(--light-gray-3);
+}
+
+.dark-mode
+.oval {
+  background-color: var(--purple);
 }
 
 .circle {
   position: absolute;
   top: 50%;
-  left: 25%;
   transform: translate(-50%, -50%);
   width: 14px;
   height: 14px;
   border-radius: 50%;
   background-color: white;
+}
+
+.light-mode
+.circle {
+  left: 25%;
+}
+
+.dark-mode
+.circle {
+  left: 75%;
+}
+
+.light-mode
+.moon path {
+  stroke: var(--light-gray-3);
+}
+
+.dark-mode
+.moon path {
+  stroke: var(--purple);
 }
 
 main
@@ -113,11 +156,21 @@ input {
   height: 48px;
   border-radius: 16px;
   border: none;
-  background-color: var(--light-gray-1);
   padding: 16px 24px;
   font-size: 16px;
   caret-color: var(--purple);
   margin-bottom: 24px;
+}
+
+.light-mode
+input {
+  background-color: var(--light-gray-1);
+}
+
+.dark-mode
+input {
+  background-color: var(--dark-gray-1);
+  color: var(--white);
 }
 
 main
@@ -170,8 +223,19 @@ p {
   font-size: 18px;
   font-weight: bold;
   display: inline-block;
-  background-color: var(--white);
   padding-right: 25px;
+}
+
+.light-mode
+.hr-container
+p {
+  background-color: var(--white);
+}
+
+.dark-mode
+.hr-container
+p {
+  background-color: var(--black);
 }
 
 .hr-container
@@ -194,7 +258,7 @@ section
 section
 li {
   font-size: 15px;
-  color: var(--dark-gray-2);
+  /*   */
   line-height: 24px;
 }
 
@@ -242,7 +306,8 @@ p {
 footer
 a {
   font-size: 14px;
-  color: var(--dark-gray-2);
+  color: inherit;
+  /* color: var(--dark-gray-2); */
   margin-right: 9px;
 }
 
