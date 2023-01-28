@@ -406,13 +406,65 @@ footer
   }
 
   footer
-  a {
-    margin-top: -5px;
+  .link-container {
+    margin-bottom: 0;
+  }
+
+}
+
+@media (min-width: 1440px) {
+  .body-container {
+    margin: 0 351px;
+  }
+
+  header {
+    margin: 58px 0 51.5px 0;
+    font-size: 18px;
+  }
+
+  main
+  input {
+    margin-bottom: 43px;
+  }
+
+  .word
+  h1 {
+    margin-bottom:5px;
+  }
+
+  section
+  .hr-container {
+    margin-bottom: 38px;
+  }
+
+  .hr-container
+  p {
+    padding-right: 23px;
+  }
+
+  section
+  .meaning {
+    margin-bottom: 24px;
+  }
+
+  section
+  .synonyms-container {
+    margin: 63px 0 39px 0;
+  }
+
+  .synonyms-container
+  p:nth-of-type(1) {
+    margin-right: 24px;
+  }
+
+  .footer-container {
+    margin-bottom: 123px;
   }
 
   footer
-  .link-container {
-    margin-bottom: 0;
+  p {
+    margin: 0 21px 0 0;
+
   }
 
 }
