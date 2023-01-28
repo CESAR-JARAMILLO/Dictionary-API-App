@@ -75,11 +75,53 @@ header
   display: flex;
   align-items: center;
   margin-right: 16px;
+  position: relative;
 }
+
+.dropdown-container:hover {
+  cursor: pointer;
+}
+
 .dropdown-container
 p {
   margin-right: 16px;
   font-weight: bold;
+}
+
+.dropdown-container
+.font-container {
+  position: absolute;
+  z-index: 1;
+  bottom: -7.5rem;
+  left: -2rem;
+  height: 106px;
+  width: 128px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  border-radius: 16px;
+  border: var(--light-gray-1);
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.dark-mode
+.dropdown-container
+.font-container {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.font-container.hide {
+  display: none;
+}
+
+.font-container
+.font:hover {
+  color: var(--purple);
+  cursor: pointer;
 }
 
 .divider {
@@ -334,6 +376,14 @@ footer
     font-size: 18px;
   }
 
+  .dropdown-container
+  .font-container {
+    height: 130px;
+    width: 156px;
+    bottom: -10rem;
+    left: -3rem;
+  }
+
   main
   input {
     margin-bottom: 50px;
@@ -429,6 +479,14 @@ footer
   header {
     margin: 58px 0 51.5px 0;
     font-size: 18px;
+  }
+
+  .dropdown-container
+  .font-container {
+    height: 152px;
+    width: 183px;
+    bottom: -11rem;
+    left: -5rem;
   }
 
   main
