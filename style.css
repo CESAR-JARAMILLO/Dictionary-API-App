@@ -102,9 +102,9 @@ p {
   align-items: center;
   padding: 10px 0;
   border-radius: 16px;
-  border: var(--light-gray-1);
   background-color: var(--white);
   color: var(--black);
+  box-shadow: 2px 2px 10px var(--light-gray-2), -2px -2px 10px var(--light-gray-2);
 }
 
 .dark-mode
