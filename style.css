@@ -57,18 +57,7 @@ hr {
 
 #body-container {
   margin: 0 24px;
-}
-
-#body-container.sans-serif {
   font-family: var(--sans-serif), sans-serif;
-}
-
-#body-container.serif {
-  font-family: var(--serif), serif;
-}
-
-#body-container.mono {
-  font-family: var(--mono), monospace;
 }
 
 header {
