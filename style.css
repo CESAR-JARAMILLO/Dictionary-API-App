@@ -55,8 +55,20 @@ hr {
   color: var(--black);
 }
 
-.body-container {
+#body-container {
   margin: 0 24px;
+}
+
+#body-container.sans-serif {
+  font-family: var(--sans-serif), sans-serif;
+}
+
+#body-container.serif {
+  font-family: var(--serif), serif;
+}
+
+#body-container.mono {
+  font-family: var(--mono), monospace;
 }
 
 header {
@@ -123,6 +135,21 @@ p {
 .font:hover {
   color: var(--purple);
   cursor: pointer;
+}
+
+.font
+.sans-serif {
+  font-family: var(--sans-serif), sans-serif;
+}
+
+.font
+.serif {
+  font-family: var(--serif), serif;
+}
+
+.font
+.mono {
+  font-family: var(--mono), monospace;
 }
 
 .divider {
@@ -367,7 +394,7 @@ footer
 }
 
 @media (min-width: 768px) {
-  .body-container {
+  #body-container {
     margin: 0 39px;
     font-size: 18px;
   }
@@ -473,7 +500,7 @@ footer
 }
 
 @media (min-width: 1440px) {
-  .body-container {
+  #body-container {
     margin: 0 351px;
   }
 
