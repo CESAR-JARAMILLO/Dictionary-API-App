@@ -1,5 +1,7 @@
 const toggleIcon = document.querySelector('.toggle-icon')
 const body = document.querySelector('body')
+const dropdownContainer = document.querySelector('.dropdown-container')
+const fontContainer = document.querySelector('.font-container')
 
 toggleIcon.addEventListener('click', () => {
   if(body.className === 'dark-mode') {
@@ -7,6 +9,10 @@ toggleIcon.addEventListener('click', () => {
   } else {
     body.classList = 'dark-mode'
   }
+})
+
+dropdownContainer.addEventListener('click', () => {
+  fontContainer.classList.toggle('hide')
 })
 
 // const word = 'keyboard';
