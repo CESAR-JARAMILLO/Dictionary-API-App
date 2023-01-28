@@ -2,15 +2,11 @@ const toggleIcon = document.querySelector('.toggle-icon')
 const body = document.querySelector('body')
 
 toggleIcon.addEventListener('click', () => {
-
-console.log('test')
   if(body.className === 'dark-mode') {
     body.classList = 'light-mode'
   } else {
     body.classList = 'dark-mode'
   }
-
-  // body.classList.toggle('dark-mode')
 })
 
 // const word = 'keyboard';
