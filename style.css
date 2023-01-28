@@ -112,6 +112,7 @@ p {
 .font-container {
   background-color: var(--black);
   color: var(--white);
+  box-shadow: 5px 5px 15px var(--purple), -5px -5px 15px var(--purple);
 }
 
 .font-container.hide {
