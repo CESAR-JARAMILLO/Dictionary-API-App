@@ -102,6 +102,10 @@ header
   height: 30px;
 }
 
+.toggle-icon:hover {
+  cursor: pointer;
+}
+
 .oval {
   position: relative;
   width: 40px;
@@ -112,6 +116,11 @@ header
 .light-mode
 .oval {
   background-color: var(--light-gray-3);
+}
+
+.light-mode
+.oval:hover {
+  background-color: var(--purple);
 }
 
 .dark-mode
