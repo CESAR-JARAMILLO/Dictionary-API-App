@@ -2,6 +2,9 @@ const toggleIcon = document.querySelector('.toggle-icon')
 const body = document.querySelector('body')
 const dropdownContainer = document.querySelector('.dropdown-container')
 const fontContainer = document.querySelector('.font-container')
+const fontElements = fontContainer.querySelectorAll(".font");
+const bodyContainer = document.querySelector("#body-container");
+const currentFont = document.querySelector(".current-font");
 
 toggleIcon.addEventListener('click', () => {
   if(body.className === 'dark-mode') {
@@ -14,6 +17,16 @@ toggleIcon.addEventListener('click', () => {
 dropdownContainer.addEventListener('click', () => {
   fontContainer.classList.toggle('hide')
 })
+
+fontElements.forEach(font => {
+    font.addEventListener("click", e => {
+        fontElements.forEach(f => f.classList.remove("selected"));
+        font.classList.add("selected");
+        bodyContainer.style.fontFamily = window.getComputedStyle(font.querySelector("p"), null).getPropertyValue("font-family");
+        currentFont.textContent = font.querySelector("p").textContent;
+    });
+});
+
 
 // const word = 'keyboard';
 // const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
