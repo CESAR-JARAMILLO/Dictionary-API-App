@@ -296,6 +296,21 @@ svg {
   width: 48px;
 }
 
+svg:hover {
+  cursor: pointer;
+}
+
+.word-container
+svg:hover path {
+  fill: var(--white);
+}
+
+.word-container
+svg:hover circle {
+  fill: var(--purple);
+  opacity: 100%;
+}
+
 section
 .hr-container {
   position: relative;
