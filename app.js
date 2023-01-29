@@ -7,6 +7,7 @@ const bodyContainer = document.querySelector("#body-container");
 const currentFont = document.querySelector(".current-font");
 const input = document.querySelector('#search')
 const hideContainer = document.querySelector('#hide-container')
+const errorSpan = document.querySelector('span')
 
 const wordText = document.querySelector('.word-text')
 const phonetics = document.querySelector('.phonetics')
@@ -38,17 +39,25 @@ fontElements.forEach(font => {
     });
 });
 
-
-
 input.addEventListener('keyup', (e) => {
   if(e.key === 'Enter') {
-    
-    const inputValue = input.value
-    const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${inputValue}`;
+    if(input.value === '') {
+      errorSpan.classList.toggle('hide')
+      input.classList.toggle('error')
+      return
+    }
 
-    fetch('data.json')
-    .then(response => response.json())
-    .then(data => {
+  if(input.className === 'error') {
+    errorSpan.classList.toggle('hide')
+    input.classList.toggle('error')
+  }
+
+  const inputValue = input.value
+  const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${inputValue}`;
+
+  fetch('data.json')
+  .then(response => response.json())
+  .then(data => {
       const defWord = data[0].word
       const phoneticsText = data[0].phonetics[0].text
       const phoneticsAudio = data[0].phonetics[2].audio
