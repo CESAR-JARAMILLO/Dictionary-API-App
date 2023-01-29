@@ -227,6 +227,11 @@ header
 }
 
 .input-container
+span {
+  color: var(--red);
+}
+
+.input-container
 svg {
   position: absolute;
   right: 15px;
@@ -241,6 +246,7 @@ input {
   padding: 16px 24px;
   font-size: 16px;
   caret-color: var(--purple);
+  margin-bottom: 8px;
 }
 
 input[type='search']::-webkit-search-cancel-button {
@@ -256,6 +262,11 @@ input {
 input {
   background-color: var(--dark-gray-1);
   color: var(--white);
+}
+
+.input-container
+input.error {
+  outline-color: var(--red);
 }
 
 input:focus {
