@@ -4,7 +4,9 @@ const dropdownContainer = document.querySelector('.dropdown-container')
 const fontContainer = document.querySelector('.font-container')
 const fontElements = fontContainer.querySelectorAll(".font");
 const bodyContainer = document.querySelector("#body-container");
-const currentFont = document.querySelector(".current-font");  
+const currentFont = document.querySelector(".current-font");
+
+// const word = document.querySelector('h1')
 
 toggleIcon.addEventListener('click', () => {
   if(body.className === 'dark-mode') {
@@ -30,7 +32,17 @@ fontElements.forEach(font => {
 fetch('data.json')
   .then(response => response.json())
   .then(data => {
-    console.log(data)
+    const defWord = data[0].word
+    const phoneticsText = data[0].phonetics[0].text
+    const phoneticsAudio = data[0].phonetics[0].audio
+    const nounDef = data[0].meanings[0].definitions[0].definition
+    const nounExample = data[0].meanings[0].definitions[0].example
+    const verbDef = data[0].meanings[1].definitions[0].definition
+    const verbExample = data[0].meanings[1].definitions[0].example
+    const synonymsList = data[0].meanings[0].synonyms
+    const sourceUrl = data[0].sourceUrls
+    console.log(synonymsList[0])
+    // word.innerText = defWord
   })
   .catch(error => {
     console.error('Error:', error)
