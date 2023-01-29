@@ -5,8 +5,17 @@ const fontContainer = document.querySelector('.font-container')
 const fontElements = fontContainer.querySelectorAll(".font");
 const bodyContainer = document.querySelector("#body-container");
 const currentFont = document.querySelector(".current-font");
+const input = document.querySelector('#search')
+const hideContainer = document.querySelector('#hide-container')
 
-// const word = document.querySelector('h1')
+const wordText = document.querySelector('.word-text')
+const phonetics = document.querySelector('.phonetics')
+const nounDefinitions = document.querySelector('.noun-definitions')
+const verbDefinitions = document.querySelector('.verb-definitions')
+const synonym = document.querySelector('.synonym')
+const example = document.querySelector('.example')
+const sourceLink = document.querySelector('.source-link')
+const playBtn = document.querySelector('.play-btn')
 
 toggleIcon.addEventListener('click', () => {
   if(body.className === 'dark-mode') {
@@ -29,48 +38,63 @@ fontElements.forEach(font => {
     });
 });
 
-fetch('data.json')
-  .then(response => response.json())
-  .then(data => {
-    const defWord = data[0].word
-    const phoneticsText = data[0].phonetics[0].text
-    const phoneticsAudio = data[0].phonetics[0].audio
-    const nounDef = data[0].meanings[0].definitions[0].definition
-    const nounExample = data[0].meanings[0].definitions[0].example
-    const verbDef = data[0].meanings[1].definitions[0].definition
-    const verbExample = data[0].meanings[1].definitions[0].example
-    const synonymsList = data[0].meanings[0].synonyms
-    const sourceUrl = data[0].sourceUrls
-    console.log(synonymsList[0])
-    // word.innerText = defWord
+
+
+input.addEventListener('keyup', (e) => {
+  if(e.key === 'Enter') {
+    
+    const inputValue = input.value
+    const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${inputValue}`;
+
+    fetch('data.json')
+    .then(response => response.json())
+    .then(data => {
+      const defWord = data[0].word
+      const phoneticsText = data[0].phonetics[0].text
+      const phoneticsAudio = data[0].phonetics[2].audio
+      const nounDef = data[0].meanings[0].definitions
+      // const nounExample = data[0].meanings[0].definitions[0].example
+      const verbDef = data[0].meanings[1].definitions
+      const verbExample = data[0].meanings[1].definitions[0].example
+      const synonymsList = data[0].meanings[0].synonyms
+      const sourceUrl = data[0].sourceUrls
+      console.log(phoneticsAudio)
+
+      if(hideContainer.className === 'hide') {
+        hideContainer.classList.toggle('hide')
+      }
+
+      wordText.innerText = defWord
+      phonetics.innerText = phoneticsText
+      if (nounDef.length > 0) {
+        nounDef.forEach(definition => {
+          nounDefinitions.innerHTML += `<li>${definition.definition}</li>`
+        });
+      } else {
+        nounDefinitions.innerHTML = '';
+      }
+      
+      if (verbDef.length > 0) {
+        verbDef.forEach(definition => {
+          verbDefinitions.innerHTML += `<li>${definition.definition}</li>`
+        });
+      } else {
+        verbDefinitions.innerHTML = '';
+      }
+      
+      synonym.innerText = synonymsList[0]
+      example.innerText = verbExample
+      sourceLink.innerText = sourceUrl
+      if(phoneticsAudio === '') {
+        playBtn.className = 'play-btn hide'
+      } else {
+        playBtn.href = phoneticsAudio
+      }
+
   })
   .catch(error => {
     console.error('Error:', error)
   })
 
-
-// const word = 'keyboard';
-// const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
-
-// fetch(url)
-//   .then(response => response.json())
-//   .then(data => {
-//     console.log(data)
-//   })
-//     .then(data => {
-//       console.log(data[0].meanings[0])
-//       console.log(data[0].word)
-//       console.log(data)
-//       console.log(data[0].phonetics[2].text)
-//       console.log(data[0].phonetics[2].audio)
-//       console.log(data[0].meanings.forEach(obj => {
-//         console.log(obj.partOfSpeech)
-//         console.log(obj.definitions[0].definition)
-//         console.log(obj.definitions[0].example)
-//       }))
-//       console.log(data[0].meanings[0].synonyms)
-//       console.log(data[0].sourceUrls)
-//     })
-//   .catch(error => {
-//     console.log(error)
-//   });
+  }
+})
