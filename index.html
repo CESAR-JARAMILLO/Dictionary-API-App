@@ -46,14 +46,16 @@
       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><path fill="none" stroke="#A445ED" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m12.663 12.663 3.887 3.887M1 7.664a6.665 6.665 0 1 0 13.33 0 6.665 6.665 0 0 0-13.33 0Z"/></svg>
     </div>
 
-    <div class="hidden-container">
+    <div id="hide-container" class="hide">
       <main>
         <div class="word-container">
           <div class="word">
-            <h1>keyboard</h1>
-            <p>/ˈkiːbɔːd/</p>
+            <h1 class="word-text"></h1>
+            <p class="phonetics"></p>
           </div>
-          <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 75 75"><g fill="#A445ED" fill-rule="evenodd"><circle cx="37.5" cy="37.5" r="37.5" opacity=".25"/><path d="M29 27v21l21-10.5z"/></g></svg>
+          <a class="play-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 75 75"><g fill="#A445ED" fill-rule="evenodd"><circle cx="37.5" cy="37.5" r="37.5" opacity=".25"/><path d="M29 27v21l21-10.5z"/></g></svg>
+          </a>
         </div>
       </main>
       <section>
@@ -62,15 +64,11 @@
           <hr>
         </div>
         <p class="meaning">Meaning</p>
-        <ul>
-          <li>(etc.) A set of keys used to operate a typewriter, computer etc.</li>
-          <li>A component of many instruments including the piano, organ, and harpsichord consisting of usually black and white keys that cause different tones to be produced when struck.</li>
-          <li>A device with keys of a musical keyboard, used to control electronic sound-producing devices which may be built into or separate from the keyboard device.</li>
-        </ul>
+        <ul class="noun-definitions"></ul>
   
         <div class="synonyms-container">
           <p>Synonyms</p>
-          <p>electronic keyboard</p>
+          <p class="synonym"></p>
         </div>
       </section>
         
@@ -80,10 +78,8 @@
           <hr>
         </div>
         <p class="meaning">Meaning</p>
-        <ul>
-          <li>To type on a computer keyboard.</li>
-        </ul>
-        <p class="example">“Keyboarding is the part of this job I hate the most.”</p>
+        <ul class="verb-definitions"></ul>
+        <p class="example"></p>
       </section>
       
       <footer>
@@ -91,7 +87,7 @@
         <div class="footer-container">
           <p>Source</p>
           <div class="link-container">
-            <a href="#">https://en.wiktionary.org/wiki/keyboard</a>
+            <a href="#" class="source-link"></a>
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><path fill="none" stroke="#838383" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.09 3.545H2.456A1.455 1.455 0 0 0 1 5v6.545A1.455 1.455 0 0 0 2.455 13H9a1.455 1.455 0 0 0 1.455-1.455V7.91m-5.091.727 7.272-7.272m0 0H9m3.636 0V5"/></svg>
           </div>
         </div>
