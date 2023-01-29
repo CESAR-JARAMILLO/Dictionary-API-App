@@ -4,7 +4,7 @@ const dropdownContainer = document.querySelector('.dropdown-container')
 const fontContainer = document.querySelector('.font-container')
 const fontElements = fontContainer.querySelectorAll(".font");
 const bodyContainer = document.querySelector("#body-container");
-const currentFont = document.querySelector(".current-font");
+const currentFont = document.querySelector(".current-font");  
 
 toggleIcon.addEventListener('click', () => {
   if(body.className === 'dark-mode') {
@@ -26,6 +26,15 @@ fontElements.forEach(font => {
         currentFont.textContent = font.querySelector("p").textContent;
     });
 });
+
+fetch('data.json')
+  .then(response => response.json())
+  .then(data => {
+    console.log(data)
+  })
+  .catch(error => {
+    console.error('Error:', error)
+  })
 
 
 // const word = 'keyboard';
