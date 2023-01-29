@@ -380,6 +380,12 @@ p:nth-of-type(2) {
   font-weight: bold;
 }
 
+.synonyms-container
+p:nth-of-type(2):hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 section
 .example {
   font-size: 15px;
