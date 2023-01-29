@@ -55,6 +55,10 @@ hr {
   color: var(--black);
 }
 
+.hide {
+  display: none;
+}
+
 #body-container {
   margin: 0 24px;
   font-family: var(--sans-serif), sans-serif;
@@ -256,10 +260,6 @@ input {
 
 input:focus {
   outline-color: var(--purple);
-}
-
-.hidden-container.hide {
-  display: none;
 }
 
 main
