@@ -422,13 +422,45 @@ footer
 a {
   font-size: 14px;
   color: inherit;
-  /* color: var(--dark-gray-2); */
   margin-right: 9px;
 }
 
 footer
 .link-container {
   margin-bottom: 85px;
+}
+
+#whoops-container.hide {
+  display: none;
+}
+
+#whoops-container {
+  text-align: center;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+#whoops-container
+h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+#whoops-container
+p {
+  font-size: 18px;
+  color: var(--light-gray-3);
+  line-height: 24px;
+}
+
+#whoops-container
+div {
+  font-size: 64px;
+  margin-bottom: 44px;
 }
 
 @media (min-width: 768px) {
